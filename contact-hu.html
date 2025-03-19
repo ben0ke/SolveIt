@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapcsolatfelvétel - SolveIt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SolveIt</h1>
+        <p>Szeretnénk, ha megosztaná velünk a gondolatait!</p>
+		<div id="languageSwitcher">
+			<a href="#" data-lang="en"><img src="english.png" alt="English" class="lang-flag"></a>
+			<a href="#" data-lang="hu"><img src="hungary.png" alt="Magyar" class="lang-flag"></a>
+		</div>
+		<div class="header-logo">
+        <img src="solveit.jpg" alt="SolveIt Logo">
+    </header>
+	
+    <nav>
+        <a href="index-hu.html">Főoldal</a>
+        <a href="about-hu.html">Rólunk</a>
+        <a href="solutions-hu.html">Megoldások & Tippek</a>
+        <a href="get-involved-hu.html">Vegye ki a részét!</a>
+        <a href="contact-hu.html" class="active">Kapcsolatfelvétel</a>
+    </nav>
+
+    <section class="contact-form">
+        <h2>Írjon Nekünk Egy Üzenetet</h2>
+        <form id="contactForm">
+            <label for="name">Név:</label>
+            <input type="text" id="name" name="name" required>
+			<br></br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+			<br></br>
+
+            <label for="message">Üzenet:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+			<br></br>
+
+            <button type="submit">Üzenet Elküldése</button>
+        </form>
+        <p id="formResponse"></p>
+    </section>
+
+    <section class="contact-info">
+        <h2>Elérhetőségeink:</h2>
+        <p>📍 Cím: 2400 Dunaújváros, Táncsics Mihály u. 1/A, Magyarország</p>
+        <p>📧 Email: contact@solveit.com</p>
+        <p>📞 Telefon: +36 70 525 6969</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SolveIt - Minden jog fenntartva.</p>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>
