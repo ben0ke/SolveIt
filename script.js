@@ -33,17 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
             let fileName = currentURL.substring(currentURL.lastIndexOf("/") + 1);
 
             if (selectedLang === "hu") {
-                if (fileName.includes("")) {
-                    window.location.href = fileName.replace("index.html", "index-hu.html");
+                if (!fileName.includes("")) {
+                    window.location.href = currentURL.replace(fileName, "index-hu.html");
                 }
             } else {
                 if (fileName.includes("-hu")) {
-                    window.location.href = fileName.replace("index-hu.html", "index.html");
+                    window.location.href = currentURL.replace(fileName, "index.html");
                 }
             }
         });
     });
 });
-
-
-
