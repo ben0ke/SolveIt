@@ -15,7 +15,7 @@
         <p>Think Global, Act Local!</p>
         <div id="languageSwitcher" aria-label="Language Switcher">
             <a href="#" data-lang="en"><img src="english.png" alt="English" class="lang-flag"></a>
-            <a href="#" data-lang="hu"><img src="hungary.png" alt="Magyar" class="lang-flag"></a>
+            <a href="#" data-lang="hu" id="hungarian-flag"><img src="hungary.png" alt="Magyar" class="lang-flag"></a>
         </div>
         <div class="header-logo">
             <img src="solveit.jpg" alt="SolveIt Logo">
@@ -71,5 +71,10 @@
     </footer>
 
     <script src="script.js" defer></script>
+    <script>
+        document.getElementById('hungarian-flag').addEventListener('click', function() {
+            window.location.href = 'index-hu.html';
+        });
+    </script>
 </body>
 </html>
