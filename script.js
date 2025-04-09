@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let fileName = currentURL.substring(currentURL.lastIndexOf("/") + 1);
 
         if (selectedLang === "hu") {
-            if (!fileName.includes("-hu")) {
+            if (!fileName.includes("")) {
                 window.location.href = currentURL.replace(fileName, "index-hu.html");
             }
         } else {
