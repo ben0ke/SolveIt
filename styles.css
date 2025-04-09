@@ -205,3 +205,13 @@ footer {
 link[rel="icon"] {
     content: url('solveit.jpg');
 }
+
+@media (max-width: 600px) {
+    .header-logo img {
+        width: 100px; /* Adjust size for smaller screens */
+    }
+    .nav a {
+        display: block;
+        margin: 10px 0; /* Stack navigation links */
+    }
+}
