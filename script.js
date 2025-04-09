@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Function to generate a random tip
     const generateRandomTip = () => {
         const tips = [
             "Switch to reusable bags and bottles.",
@@ -15,13 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("tipText").innerText = randomTip;
     };
 
-    // Event listener for tip generation button
     const tipButton = document.getElementById("generateTips");
     if (tipButton) {
         tipButton.addEventListener("click", generateRandomTip);
     }
 
-    // Function to handle language switch
     const handleLanguageSwitch = (e) => {
         e.preventDefault();
         const selectedLang = e.currentTarget.getAttribute("data-lang");
@@ -39,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-    // Event listeners for language switcher links
     const languageSwitcherLinks = document.querySelectorAll("#languageSwitcher a");
     languageSwitcherLinks.forEach(link => {
         link.addEventListener("click", handleLanguageSwitch);
