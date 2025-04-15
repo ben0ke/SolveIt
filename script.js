@@ -20,21 +20,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const handleLanguageSwitch = (e) => {
-        e.preventDefault();
-        const selectedLang = e.currentTarget.getAttribute("data-lang");
-        let currentURL = window.location.pathname;
-        let fileName = currentURL.substring(currentURL.lastIndexOf("/") + 1);
+    e.preventDefault();
+    const selectedLang = e.currentTarget.getAttribute("data-lang");
+    const currentURL = window.location.pathname;
+    const fileName = currentURL.substring(currentURL.lastIndexOf("/") + 1);
 
-        if (selectedLang === "hu") {
-            if (!fileName.includes("")) {
-                window.location.href = currentURL.replace(fileName, "index-hu.html");
-            }
-        } else {
-            if (fileName.includes("-hu")) {
-                window.location.href = currentURL.replace(fileName, "index.html");
-            }
+    if (selectedLang === "hu") {
+        if (!fileName.includes("-hu")) {
+            window.location.href = currentURL.replace(fileName, "index-hu.html");
         }
+    } else {
+        if (fileName.includes("-hu")) {
+            window.location.href = currentURL.replace(fileName, "index.html");
+        }
+    }
     };
+
+    console.log("Selected Language:", selectedLang);
+    console.log("Current URL:", currentURL);
+    console.log("File Name:", fileName);
 
     const languageSwitcherLinks = document.querySelectorAll("#languageSwitcher a");
     languageSwitcherLinks.forEach(link => {
